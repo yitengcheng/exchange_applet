@@ -2,6 +2,7 @@ import Taro from "@tarojs/taro";
 import { Component } from "react";
 import apis from "./apis";
 import { post } from "./HiNet";
+import "taro-ui/dist/style/index.scss";
 
 class App extends Component {
   componentDidMount() {

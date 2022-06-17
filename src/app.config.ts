@@ -1,12 +1,12 @@
 export default defineAppConfig({
-  pages: ["pages/Home/index", "pages/My/index"],
+  pages: ["pages/Coupons/index", "pages/My/index", "pages/CouponDetail/index"],
   tabBar: {
     color: "#000000",
     selectedColor: "#DC143C",
     backgroundColor: "#ffffff",
     list: [
       {
-        pagePath: "pages/Home/index",
+        pagePath: "pages/Coupons/index",
         iconPath: "./assets/images/home.png",
         selectedIconPath: "./assets/images/home_choose.png",
         text: "首页",
