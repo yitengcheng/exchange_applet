@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "exchange_applet",
   "description": "优达好券,与联通合作的优惠券项目",
-  "appid": "touristappid",
+  "appid": "wx6e94e7eaa811d0bd",
   "setting": {
     "urlCheck": true,
     "es6": false,
