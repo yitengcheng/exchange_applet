@@ -35,8 +35,10 @@ export default (props: any) => {
     <View className={styles.container}>
       <View className={styles.couponContainer}>
         <View className={styles.couponRow}>
-          <Text>优惠券码：{coupon?.couponCode ?? "暂无"}</Text>
-          <Text>
+          <Text className={styles.couponText}>
+            优惠券码：{coupon?.couponCode ?? "暂无"}
+          </Text>
+          <Text className={styles.couponText}>
             有效期：
             {coupon?.validityTime
               ? dayjs(coupon?.validityTime).format("YYYY-MM-DD")
@@ -44,26 +46,35 @@ export default (props: any) => {
           </Text>
         </View>
         <View className={styles.couponRow}>
-          <Text>使用条件：满{coupon?.serviceConditions ?? "暂无"}元</Text>
-          <Text>减免金额：立减{coupon?.creditAmount ?? "暂无"}元</Text>
+          <Text className={styles.couponText}>
+            使用条件：满{coupon?.serviceConditions ?? "暂无"}元
+          </Text>
+          <Text className={styles.couponText}>
+            减免金额：立减{coupon?.creditAmount ?? "暂无"}元
+          </Text>
         </View>
         <View className={styles.couponRow}>
-          <Text>
+          <Text className={styles.couponText}>
             兑换时间：
             {coupon?.changeTime
               ? dayjs(coupon?.changeTime).format("YYYY-MM-DD")
               : "暂无"}
           </Text>
+          <Text className={styles.couponText}>
+            状态：{coupon?.status === 2 ? "未使用" : "已使用"}
+          </Text>
         </View>
       </View>
-      <View className={styles.couponQr}>
-        <QRCode
-          size={getPx()}
-          text={coupon?.couponCode}
-          errorCorrectLevel="M"
-          typeNumber={2}
-        />
-      </View>
+      {coupon.status === 2 ? (
+        <View className={styles.couponQr}>
+          <QRCode
+            size={getPx()}
+            text={coupon?.couponCode}
+            errorCorrectLevel="M"
+            typeNumber={2}
+          />
+        </View>
+      ) : null}
     </View>
   );
 };
