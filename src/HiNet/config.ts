@@ -2,7 +2,7 @@
 const DEV_URL = "http://192.168.31.254:4000/exApi";
 // const DEV_URL = 'https://yyyw.qiantur.com/api';
 
-const PRO_URL = "https://yyyw.qiantur.com/exApi";
+const PRO_URL = "https://ydhj.qiantur.com/exApi";
 
 // const DEFAULT_IMG_URL = 'http://192.168.2.4:9000';
 const DEFAULT_IMG_URL = "http://img.qiantur.com/";
