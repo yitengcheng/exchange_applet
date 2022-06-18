@@ -64,6 +64,19 @@ export default (props: any) => {
             状态：{coupon?.status === 2 ? "未使用" : "已使用"}
           </Text>
         </View>
+        {coupon?.status === 3 ? (
+          <View className={styles.couponRow}>
+            <Text className={styles.couponText}>
+              使用时间：
+              {coupon?.useTime
+                ? dayjs(coupon?.useTime).format("YYYY-MM-DD")
+                : "暂无"}
+            </Text>
+            <Text className={styles.couponText}>
+              消费店铺：{coupon?.consumerShop?.name ?? "暂无"}
+            </Text>
+          </View>
+        ) : null}
       </View>
       {coupon.status === 2 ? (
         <View className={styles.couponQr}>

@@ -1,3 +1,74 @@
 .container {
-    display: flex;
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+.loginContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 300px;
+}
+.loginBox {
+  border: 1px solid #000000;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  padding: 70px;
+  border-radius: 8px;
+}
+.loginBtn {
+  margin-top: 80px;
+}
+.shopContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.shopInfoContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border: 1px solid #000000;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 8px;
+}
+.shopInfoRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.shopInfoText {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.65);
+}
+.expenseBtn {
+  margin-top: 20px;
+}
+.couponListContainer {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+.cameraContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+}
+.camera {
+  width: 80vw;
+  height: 80vw;
+}
+.expenseTotal {
+  padding-left: 20px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.65);
 }
